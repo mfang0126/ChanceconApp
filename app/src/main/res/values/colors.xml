@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#464646</color>
+    <color name="colorPrimaryDark">#313335</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="input_register_bg">#FFFFFF</color>
+    <color name="input_hint">#a1a1a1</color>
+    <color name="login_bk">#f9f9f9</color>
+    <color name="PrimaryColor">#2196F3</color>
+    <color name="PrimaryDarkColor">#1976d2</color>
+    <color name="indicator">#ecd95a</color>
+    <color name="homepage">#ffffff</color>
+
+    <color name="progressBarColor">#e85b22</color>
+    <color name="progressBarColorInside">#97bf31</color>
+    <color name="backgroundProgressBarColor">#dadada</color>
+    <color name="paragraph">#217f8a</color>
 </resources>

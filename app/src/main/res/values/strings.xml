@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">ChanceconApp</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
-    <string name="action_settings">Settings</string>
+    <string name="hint_name">Email</string>
+    <string name="hint_pass">Password</string>
+    <string name="logo">CHANCELLOR CONSTRUCTION LTD</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="update_paragraph">Our Auckland wide team starts with our professional Project Managers who manage your home building process seamlessly, from initial planning, design and resource management, right through to the build, interior design and finishing. We are Master Builder qualified and will assign a specialist team to each project that is reliable and trustworthy to finish the project on time and on budget.</string>
+    <string name="percentage">70%</string>
 </resources>
