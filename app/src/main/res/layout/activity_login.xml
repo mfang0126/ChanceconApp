@@ -3,28 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:weightSum="2"
+    android:weightSum="7"
     tools:context=".activity.MainActivity"
     android:orientation="vertical"
     android:background="@color/login_bk">
 
     <LinearLayout
-        android:layout_weight="1"
+        android:layout_weight="3"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingLeft="10dp"
         android:paddingRight="10dp">
 
+
+
     </LinearLayout>
 
     <LinearLayout
-        android:padding="30dp"
-        android:layout_weight="1"
+        android:paddingTop="20dp"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:layout_weight="4"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -33,34 +33,34 @@
             android:layout_marginBottom="10dp"
             android:background="@color/input_register_bg"
             android:hint="@string/hint_name"
-            android:padding="15dp"
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:textColorHint="@color/input_hint"
-            android:ems="10"
             android:id="@+id/tEmail" />
 
         <EditText
             android:layout_marginBottom="10dp"
             android:background="@color/input_register_bg"
             android:hint="@string/hint_pass"
-            android:padding="15dp"
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberPassword"
             android:textColorHint="@color/input_hint"
-            android:ems="10"
             android:id="@+id/tPass" />
 
         <Button
-            android:background="@color/input_register_bg"
-            android:layout_marginTop="35dp"
+            android:background="@drawable/login_no_text_200"
+            android:text="@string/btn_login"
+            android:textColor="@color/input_register_bg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btn_login"
             android:id="@+id/btnLogin"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textSize="22dp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </LinearLayout>
