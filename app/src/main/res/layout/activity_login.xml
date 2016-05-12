@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:weightSum="10"
     tools:context=".activity.MainActivity"
     android:orientation="vertical"
@@ -12,9 +13,26 @@
         android:layout_weight="4"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true" />
+
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="bottom"
+            android:padding="10dip"
+            app:centered="true"
+            app:fillColor="#ff0099"
+            app:pageColor="#FF0000"
+            app:snap="false" />
 
     </LinearLayout>
 
@@ -87,7 +105,8 @@
         </LinearLayout>
 
         <Button
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
             android:background="@drawable/login_no_text"
             android:text="@string/btn_login"
             android:textColor="@color/input_register_bg"

@@ -2,15 +2,12 @@ package freedom.chancecon.chanceconapp.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -54,6 +51,8 @@ public class MainActivity extends AppCompatActivity
         circularProgressBarInside.setProgressBarWidth(getResources().getDimension(R.dimen.progressBarWidth));
         circularProgressBarInside.setBackgroundProgressBarWidth(getResources().getDimension(R.dimen.backgroundProgressBarWidth));
 
+
+
     }
 
     @Override
@@ -75,9 +74,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id ==R.id.drawer_menu) {
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -93,11 +89,12 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.home) {
             startActivity(new Intent(this, MainActivity.class));
-        } else if (id == R.id.nav_home) {
-        } else if (id == R.id.nav_project) {
+        } else if (id == R.id.nav_gallery) {
         } else if (id == R.id.nav_news) {
+            startActivity(new Intent(this, NewsActivity.class));
         } else if (id == R.id.nav_contact) {
-//            startActivity(new Intent(this, Contact.class));
+            startActivity(new Intent(this, ContactActivity.class));
+        } else if (id == R.id.nav_tips) {
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
