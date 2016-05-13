@@ -1,9 +1,12 @@
 package freedom.chancecon.chanceconapp.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
+import android.view.View;
+import android.widget.Button;
 
 import com.viewpagerindicator.CirclePageIndicator;
 
@@ -27,6 +30,12 @@ public class SplashActivity extends Activity {
         setContentView(R.layout.activity_splash);
 
         initBanner();
+    }
+
+    public void toLogin(View view)
+    {
+        Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+        startActivity(intent);
     }
 
     private void initBanner() {

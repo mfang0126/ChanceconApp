@@ -30,8 +30,16 @@ public class ContactActivity extends AppCompatActivity {
             }
         });
 
+
+
         webView .loadUrl("http://chancecon.co.nz/index.php/contact/");
         setContentView(webView );
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        this.finish();
     }
 
 //    @Override
