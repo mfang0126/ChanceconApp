@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity
         int animationDuration = 2000;
         //Circular Progressbar Outside
         circularProgressBar = (CircularProgressBar) findViewById(R.id.circularProgressbar);
-        circularProgressBar.setProgressWithAnimation(65,animationDuration);
+        circularProgressBar.setProgressWithAnimation(70,animationDuration);
         circularProgressBar.setColor(ContextCompat.getColor(this,R.color.progressBarColor));
         circularProgressBar.setBackgroundColor(ContextCompat.getColor(this,R.color.backgroundProgressBarColor));
         circularProgressBar.setProgressBarWidth(getResources().getDimension(R.dimen.progressBarWidth));
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity
 
         //Circular Progressbar Inside
         circularProgressBarInside = (CircularProgressBar) findViewById(R.id.circularProgressbarInside);
-        circularProgressBarInside.setProgressWithAnimation(55, animationDuration);
+        circularProgressBarInside.setProgressWithAnimation(50, animationDuration);
         circularProgressBarInside.setColor(ContextCompat.getColor(this,R.color.progressBarColorInside));
         circularProgressBarInside.setBackgroundColor(ContextCompat.getColor(this,R.color.backgroundProgressBarColor));
         circularProgressBarInside.setProgressBarWidth(getResources().getDimension(R.dimen.progressBarWidth));

@@ -44,26 +44,28 @@ public class GalleryActivity extends FragmentActivity {
                 .setThumbnailSize(100)
                 .setZoom(true)
                 .setFragmentManager(getSupportFragmentManager())
-                .addMedia(MediaInfo.mediaLoader(new DefaultImageLoader(R.drawable.gallery)))
-                .addMedia(MediaInfo.mediaLoader(new DefaultImageLoader(toBitmap(R.drawable.gallery))))
-                .addMedia(MediaInfo.mediaLoader(new MediaLoader() {
-                    @Override public boolean isImage() {
-                        return true;
-                    }
-
-                    @Override public void loadMedia(Context context, ImageView imageView,
-                                                    MediaLoader.SuccessCallback callback) {
-                        imageView.setImageBitmap(toBitmap(R.drawable.gallery));
-                        callback.onSuccess();
-                    }
-
-                    @Override public void loadThumbnail(Context context, ImageView thumbnailView,
-                                                        MediaLoader.SuccessCallback callback) {
-                        thumbnailView.setImageBitmap(toBitmap(R.drawable.gallery));
-                        callback.onSuccess();
-                    }
-                }))
-                .addMedia(MediaInfo.mediaLoader(new DefaultVideoLoader(movieUrl, R.mipmap.ic_launcher)))
+                .addMedia(MediaInfo.mediaLoader(new DefaultImageLoader(R.drawable.splash1)))
+                .addMedia(MediaInfo.mediaLoader(new DefaultImageLoader(R.drawable.splash2)))
+                .addMedia(MediaInfo.mediaLoader(new DefaultImageLoader(R.drawable.splash3)))
+//                .addMedia(MediaInfo.mediaLoader(new DefaultImageLoader(toBitmap(R.drawable.gallery))))
+//                .addMedia(MediaInfo.mediaLoader(new MediaLoader() {
+//                    @Override public boolean isImage() {
+//                        return true;
+//                    }
+//
+//                    @Override public void loadMedia(Context context, ImageView imageView,
+//                                                    MediaLoader.SuccessCallback callback) {
+//                        imageView.setImageBitmap(toBitmap(R.drawable.gallery));
+//                        callback.onSuccess();
+//                    }
+//
+//                    @Override public void loadThumbnail(Context context, ImageView thumbnailView,
+//                                                        MediaLoader.SuccessCallback callback) {
+//                        thumbnailView.setImageBitmap(toBitmap(R.drawable.gallery));
+//                        callback.onSuccess();
+//                    }
+//                }))
+                .addMedia(MediaInfo.mediaLoader(new DefaultVideoLoader(movieUrl, R.drawable.logo)))
                 .addMedia(infos);
     }
 

@@ -10,8 +10,6 @@ import android.view.View;
 import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import freedom.chancecon.chanceconapp.R;
 
@@ -20,7 +18,7 @@ public class SplashActivity extends Activity {
     private static ViewPager mPager;
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
-    private static final Integer[] IMAGES= {R.drawable.photo_1,R.drawable.photo_2,R.drawable.photo_3};
+    private static final Integer[] IMAGES= {R.drawable.splash1,R.drawable.splash2,R.drawable.splash3};
     private ArrayList<Integer> ImagesArray = new ArrayList<Integer>();
 
     @Override
@@ -35,6 +33,7 @@ public class SplashActivity extends Activity {
     {
         Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
         startActivity(intent);
+        finish();
     }
 
     private void initBanner() {
@@ -45,9 +44,7 @@ public class SplashActivity extends Activity {
 
         mPager = (ViewPager) findViewById(R.id.pager);
 
-
         mPager.setAdapter(new SliderAdapter(SplashActivity.this,ImagesArray));
-
 
         CirclePageIndicator indicator = (CirclePageIndicator)
                 findViewById(R.id.indicator);
@@ -58,29 +55,7 @@ public class SplashActivity extends Activity {
 
         indicator.setRadius(5 * density);
 
-
-
         NUM_PAGES =IMAGES.length;
-
-
-
-        // Auto start of viewpager
-        final Handler handler = new Handler();
-        final Runnable Update = new Runnable() {
-            public void run() {
-                if (currentPage == NUM_PAGES) {
-                    currentPage = 0;
-                }
-                mPager.setCurrentItem(currentPage++, true);
-            }
-        };
-        Timer swipeTimer = new Timer();
-        swipeTimer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                handler.post(Update);
-            }
-        }, 3000, 3000);
 
         // Pager listener over indicator
         indicator.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {

@@ -18,7 +18,7 @@ public class ContactActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
-        getSupportActionBar().setTitle("CONTACT");
+//        getSupportActionBar().setTitle("CONTACT");
         webView = new WebView(this);
         webView.getSettings().setJavaScriptEnabled(true);
         final Activity activity = this;
@@ -26,10 +26,15 @@ public class ContactActivity extends AppCompatActivity {
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
                 Toast.makeText(activity, description, Toast.LENGTH_SHORT).show();
             }
+
+            @Override
+            public void onPageFinished(WebView view, String url)
+            {
+                webView.loadUrl("javascript:(function() { " +
+                        "document.getElementsByTagName('header')[0].style.display=\"none\"; " +
+                        "})()");
+            }
         });
-
-
-
         webView .loadUrl("http://chancecon.co.nz/index.php/contact/");
         setContentView(webView );
     }

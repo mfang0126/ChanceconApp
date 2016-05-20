@@ -84,7 +84,6 @@ public class LoginActivity extends Activity {
                             .show();
                 }
             }
-
         });
 
         initBanner();
@@ -101,7 +100,7 @@ public class LoginActivity extends Activity {
         for(int i=0;i<IMAGES.length;i++)
             ImagesArray.add(IMAGES[i]);
 
-        mPager = (ViewPager) findViewById(R.id.pager);
+        mPager = (ViewPager) findViewById(R.id.login_pager);
 
 
         mPager.setAdapter(new SliderAdapter(LoginActivity.this,ImagesArray));
@@ -116,11 +115,7 @@ public class LoginActivity extends Activity {
 
         indicator.setRadius(5 * density);
 
-
-
         NUM_PAGES =IMAGES.length;
-
-
 
         // Auto start of viewpager
         final Handler handler = new Handler();
