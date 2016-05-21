@@ -21,7 +21,6 @@ public class NewsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
-//        getSupportActionBar().setTitle("NEWS");
         webView = new WebView(this);
         webView.getSettings().setJavaScriptEnabled(true);
         final Activity activity = this;

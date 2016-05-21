@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.home) {
             startActivity(new Intent(this, MainActivity.class));
         } else if (id == R.id.nav_gallery) {
-            startActivity(new Intent(this, GalleryActivity.class));
+            startActivity(new Intent(this, GalleryListActivity.class));
         } else if (id == R.id.nav_news) {
             startActivity(new Intent(this, NewsActivity.class));
         } else if (id == R.id.nav_contact) {

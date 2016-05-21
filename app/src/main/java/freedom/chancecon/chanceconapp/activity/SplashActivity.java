@@ -3,7 +3,6 @@ package freedom.chancecon.chanceconapp.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
@@ -11,6 +10,7 @@ import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.ArrayList;
 
+import freedom.chancecon.chanceconapp.Adapter.SliderAdapter;
 import freedom.chancecon.chanceconapp.R;
 
 public class SplashActivity extends Activity {

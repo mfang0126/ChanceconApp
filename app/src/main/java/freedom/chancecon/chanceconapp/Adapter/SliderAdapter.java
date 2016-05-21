@@ -1,4 +1,4 @@
-package freedom.chancecon.chanceconapp.activity;
+package freedom.chancecon.chanceconapp.Adapter;
 
 import android.content.Context;
 import android.os.Parcelable;

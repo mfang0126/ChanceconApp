@@ -27,6 +27,7 @@ import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import freedom.chancecon.chanceconapp.Adapter.SliderAdapter;
 import freedom.chancecon.chanceconapp.R;
 import freedom.chancecon.chanceconapp.app.AppConfig;
 import freedom.chancecon.chanceconapp.app.AppController;
@@ -166,7 +167,7 @@ public class LoginActivity extends Activity {
         pDialog.setMessage("Logging in ...");
         showDialog();
 
-        StringRequest strReq = new StringRequest(Request.Method.POST,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST,
                 AppConfig.URL_LOGIN, new Response.Listener<String>() {
 
             @Override
@@ -228,7 +229,7 @@ public class LoginActivity extends Activity {
 
         };
 
-        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
+        AppController.getInstance().addToRequestQueue(stringRequest, tag_string_req);
     }
 
     private void showDialog() {
